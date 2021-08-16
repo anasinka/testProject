@@ -9,7 +9,7 @@ const styles={
         padding: 0
     }
 }
-function TodoList(todos){
+function TodoList({todos}){
     return  (
         <ul style={styles.ul}>
             {todos.map((todo)=>{

@@ -8,4 +8,4 @@ const Input=(props)=>{
                placeholder={props.placeholder}/>
     );
 }
-export default Registration;
+export default Input;

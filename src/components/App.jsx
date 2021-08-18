@@ -10,7 +10,7 @@ function App() {
       {
         <BrowserRouter>
           <Switch>
-            <Route path="/" component={Registration} />
+            <Route path="/" component={Base_notes} />
             <Route path="/registration" component={Registration} />
             <Route path="/base_notes" component={Base_notes} />
           </Switch>

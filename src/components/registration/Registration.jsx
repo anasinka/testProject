@@ -12,9 +12,7 @@ const Registration = () => {
             <div className="registration__header">Регистрация</div>
             <Input value={email} setValue={setEmail} type="text" placeholder="Введите email..."/>
             <Input value={password} setValue={setPassword} type="password" placeholder="Введите пароль..."/>
-            <button className="registration__btn" onClick={() => console.log('Все ок')}><NavLink to="/base_notes">Войти</NavLink></button>
-
-           
+            <button className="registration__btn" onClick={() => console.log('Все ок')}><NavLink to="/App">Войти</NavLink></button>           
         </div>
     );
 };

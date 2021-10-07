@@ -1,23 +1,30 @@
 import React from "react";
-import "./app.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Registration from "./registration/Registration";
-import Base_notes from "./base_notes/Base_notes";
-
-function App() {
-  return (
-    <div className="app">
-      {
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" component={Base_notes} />
-            <Route path="/registration" component={Registration} />
-            <Route path="/base_notes" component={Base_notes} />
-          </Switch>
-        </BrowserRouter>
-      }
-    </div>
-  );
+import AddNote from './AddNote';
+import ListNotes from './ListNotes';
+class App extends React.Component{
+state ={
+    UserId:{}, 
+    Notes:{}
+};
+addNote = Note=> {
+    // 1. Делаем копию объекта state
+    const Notes = { ...this.state.Notes };
+    // 2. Добавить новый бургер в переменную burgers
+    Notes[`Note${Date.now()}`] = Note;
+    // 3. Записать наш новый объект burgers в state
+    this.setState({ Notes });
+  };
+  render() {
+    return (
+       <div className='Node-paradise'>
+          <div className='ListNode'>
+            <ListNotes title='List'/>
+          </div>   
+          <AddNote addNote={this.addNote}/>      
+        </div>     
+    );
+  }
 }
+
 
 export default App;
